@@ -13,6 +13,14 @@
         margin-top: 7px;
         margin-left: 5px;
     }
+
+    a {
+        text-decoration:  none;
+        color: #9F0311;
+    }
+    a:hover {
+        color: #000;
+    }
 </style>
 <section id="header">
     <div class="container">
@@ -60,15 +68,15 @@
                         $news_author = $row['news_author'];
                         $news_date = $row['news_date'];
                         $news_image = $row['news_image'];
-                        $news_content = substr($row['news_content'],0,500);
+                        $news_content = $row['news_content'];
                         $news_tags = $row['news_tags'];
                 ?>   
 
-                    <h2>
-                        <a href="#"><?php echo $news_title ?></a>
-                    </h2>
+                    <h4>
+                        <a href="#"><b><?php echo $news_title ?></b></a>
+                    </h4>
                     <p class="lead">
-                        by <a href="index.php"><?php echo $news_author ?></a>
+                        Đăng bởi <a href="index.php"><?php echo $news_author ?></a>
                     </p>
                     <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $news_date ?></p>
                     <img class="img-fluid" src="images/<?php echo $news_image; ?> " alt="" style="width: 900px;">
@@ -92,12 +100,15 @@
                         $noti_content = $row['noti_content'];
                 ?>   
 
-                        <h2>
+                        <h4>
                             <a href="#"><?php echo $noti_title ?></a>
-                        </h2>
+                        </h4>
                         <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $noti_date; ?></p>
                         <img class="img-fluid" src="images/<?php echo $noti_image; ?> " alt="" style="width: 900px;">
-                        <hr>
+                        <hr width="30%"
+                            color="red"
+                            align="center"
+                            size="5px" />
                         <p><?php echo $noti_content; ?></p>
 
                         <hr>

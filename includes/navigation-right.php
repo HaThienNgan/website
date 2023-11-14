@@ -72,7 +72,7 @@
                         </a>
                     </li>
                     <li class="nav-links">
-                        <a style="text-decoration: none;" href="#">
+                        <a style="text-decoration: none;" href="san-pham-dich-vu.php">
                             <i class='bx bx-package icon'></i>
                             <span class="text nav-text">Sản phẩm dịch vụ</span>
                         </a>
