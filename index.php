@@ -69,8 +69,8 @@
                                 
                             </div>
                         
-                            <div class="col-2">
-                                <img width="100%" src="images/chukyso.jpg" alt="">
+                            <div class="col-4">
+                                <img class="img-fluid" src="images/chukyso.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -114,29 +114,38 @@
                         $news_author = $row['news_author'];
                         $news_date = $row['news_date'];
                         $news_image = $row['news_image'];
-                        $news_content = substr($row['news_content'],0,500);
+                        $news_content = substr($row['news_content'],0,100);
                         $news_status = $row['news_status'];
 
                         if($news_status == 'published'){
                             ?>   
                                 <!-- First Blog Post -->
                                 <div  class="col-6 news-header" >
-                                <div class="row">
-                                        <a href="post.php?new_id=<?php echo $news_id; ?>"><?php echo $news_title; ?></a>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="post.php?new_id=<?php echo $news_id; ?>"><?php echo $news_title; ?></a>
+                                        </div>
+                                        
                                         <div class="col-6">
                                             <img class="img-fluid" src="images/<?php echo $news_image; ?>" alt="">
                                         </div>
-                                        <div class="col-6"><?php echo $news_content; ?></div>
+                                        <div class="col-6">
+                                            <?php echo $news_content; ?>
+                                        </div>
+
                                     </div>
                                 </div>
                             <?php
                         }
                     }
                 ?>
-                
-                <button class="btn justify-content-end"><a href="ban-tin.php">See More</a></button>
+                        
             </div>
-
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <button class="btn"><a href="ban-tin.php">See More</a></button> 
+                </div>
+            </div>
             <div class="row justify-content-center" id="noti">
                 <h5 class="title">
                     Thông Báo
@@ -150,7 +159,7 @@
                         $noti_title = $row['noti_title'];
                         $noti_date = $row['noti_date'];
                         $noti_image = $row['noti_image'];
-                        $noti_content = substr($row['noti_content'],0,300);
+                        $noti_content = substr($row['noti_content'],0,100);
                         ?>   
                             <div class="col-7">
                                 <p><?php echo $noti_date; ?></p>
@@ -216,7 +225,11 @@
                     </div>
                 </div>
                 <div class="col-3">
-                    <h5 class="title">Liên kết</h5>
+                    <div class="row">
+                        <div class="col-12">
+                            <h5 class="title">Liên kết</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
 

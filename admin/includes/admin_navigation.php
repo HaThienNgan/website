@@ -112,6 +112,20 @@
                 </ul>
             </li>
             <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#phong-ban"><i class="fa fa-fw fa-arrows-v"></i> Phòng Ban <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="phong-ban" class="collapse">
+                    <li>
+                        <a href="./admin_phongban.php">Tất cả phòng ban</a>
+                    </li>
+                    <li>
+                        <a href="#">Tất cả Thành viên</a>
+                    </li>
+                    <li>
+                        <a href="#">Thêm thành viên</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
                 <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> Categories </a>
             </li>
             <li class="">

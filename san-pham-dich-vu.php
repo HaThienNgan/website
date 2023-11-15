@@ -39,15 +39,6 @@
                                         $query = "SELECT * FROM structure";
                                         $select_structure_menu = mysqli_query($connect, $query);
                                     ?>
-                                    <ul class="dropdown-menu list-unstyled">
-                                        <?php
-                                            while ($row = mysqli_fetch_assoc($select_structure_menu)){
-                                                $structure_id = $row['structure_id'];
-                                                $structure_title = $row['structure_title'];
-                                                echo "<li> <a class='dropdown-item' href='phong-ban.php?phong-ban=$structure_id'> {$structure_title} </a></li>";
-                                            }          
-                                        ?>
-                                    </ul>
                                 </div>
                             </li>
                         </ul>
@@ -60,18 +51,30 @@
 <section id="content-sanpham">
     <div class="container">
         <div class="row justify-content-center g-2">
-            <div style="border: 1px solid #9F0311; border-radius: 8px; margin-right: 15px;" class="col-5">
-                <p style="text-align: center;">Dịch vụ Chữ Ký Số</p>
-                <img class="img-fluid mx-auto d-block" src="images/chukyso.jpg" alt="hinhanh-dichvu-chukyso" style="height: 300px;">
-                <p style="text-align: center;"><a href="#">Xem Chi Tiết</a></p>
-            </div>
+            <?php
+                    $query = "SELECT * FROM product";
+                    $select_all_product_query = mysqli_query($connect, $query);
+                    
+                    while ($row = mysqli_fetch_assoc($select_all_product_query)){
+                        $product_id = $row['product_id'];
+                        $product_name = $row['product_name'];
+                        $product_content = $row['product_content'];
+                        $product_image = $row['product_image'];
+                ?> 
+                        <div style="border: 1px solid #9F0311; border-radius: 8px; margin-right: 15px;" class="col-5">
+                            <p style="text-align: center;"><?php echo $product_name; ?></p>
+                            <img class="img-fluid mx-auto d-block" src="images/<?php echo $product_image; ?>" alt="hinhanh-dichvu-chukyso" style="height: 300px;">
+                            <p style="text-align: center;"><a href="post.php?product_id=<?php echo $product_id; ?>">Xem Chi Tiết</a></p>
+                        </div>
+                    
+                <?php
+                    }
+            ?>
+
             <div style="border: 1px solid #9F0311; border-radius: 8px;" class="col-5">
                 <p style="text-align: center;">Dịch vụ Chữ Ký Số</p>
                 <img class="img-fluid mx-auto d-block" src="images/chukyso.jpg" alt="hinhanh-dichvu-chukyso" style="height: 300px;">
                 <p style="text-align: center;"><a href="#">Xem Chi Tiết</a></p>
-            </div>
-            <div class="col-5">
-                
             </div>
         </div>
     </div>

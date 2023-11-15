@@ -39,13 +39,13 @@
     function insertCategories(){
         global $connect;
         if (isset($_POST['submit'])){
-            $cat_title = $_POST['cat_title'];
+            $structure_title = $_POST['structure_title'];
 
-             if($cat_title == "" || empty($cat_title)){
+             if($structure_title == "" || empty($structure_title)){
                 echo '<div class="alert alert-danger" role="alert">Please enter a title</div>';
              }else{
-                 $query = "INSERT INTO categories(cat_title)";
-                 $query .= " VALUES('{$cat_title}') ";
+                 $query = "INSERT INTO structure(structure_title)";
+                 $query .= " VALUES('{$structure_title}') ";
 
                  $create_category_query = mysqli_query($connect, $query);
 
@@ -59,28 +59,28 @@
 
     function findAllCategories(){
         global $connect;
-        $query = "SELECT * FROM categories ";
+        $query = "SELECT * FROM structure ";
         $select_categories = mysqli_query($connect, $query);
         while ($row = mysqli_fetch_assoc($select_categories)){
-            $cat_id = $row['cat_id'];
-            $cat_title = $row['cat_title'];
+            $structure_id = $row['structure_id'];
+            $structure_title = $row['structure_title'];
 
             echo "<tr>";
-            echo "<td> {$cat_id} </td>";
-            echo "<td> {$cat_title} </td>";
-            echo "<td> <a href='categories.php?delete={$cat_id}'> Delete </a></td>";
-            echo "<td> <a href='categories.php?edit={$cat_id}'> Edit </a></td>";
+            echo "<td> {$structure_id} </td>";
+            echo "<td> {$structure_title} </td>";
+            echo "<td> <a href='categories.php?delete={$structure_id}'> Delete </a></td>";
+            echo "<td> <a href='categories.php?edit={$structure_id}'> Edit </a></td>";
             echo "</tr>";
         }
     }
 
-    function delateCategories(){
+    function deleteCategories(){
         global $connect;
         if(isset($_GET['delete'])){
-            $the_cat_id = $_GET['delete'];
-            $query = "DELETE FROM categories WHERE cat_id = {$the_cat_id} ";
+            $the_struc_id = $_GET['delete'];
+            $query = "DELETE FROM structure WHERE structure_id = {$the_struc_id} ";
             $delete_query = mysqli_query($connect, $query);
-            header("Location: categories.php");
+            header("Location: admin_phongban.php");
         }
     }
 
