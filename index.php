@@ -1,6 +1,18 @@
 <?php 
     include "includes/header.php";
 ?>
+<style>
+    #footer li a {
+        text-decoration: none;
+        color: #fff;
+    }
+    #footer li a:hover {
+        text-decoration: underline #fff;
+    }
+    #footer ul{
+        list-style-type: none;
+    }
+</style>
     <section id="header">
         <div class="container">
             <div class="row ">
@@ -235,13 +247,34 @@
 
         </section>
 
-        <section style="background-color: #9F0311; height: 100%; text-align: center;" id="footer">
+        <section style="background-color: #9F0311; color: #fff; padding: 5px; " id="footer">
             <div  class="container">
-                Bản quyền thuộc về Trung tâm Tin học và Tính toán - Viện Hàn lâm KHCNVN <br />
-                Liên hệ với Phòng Nội dung thông tin số khi phát hành lại thông tin trên Website này. <br />
-                Địa chỉ: 18 Hoàng Quốc Việt, Cầu Giấy, Hà Nội. Email: thongtin@vast.vn
+                <div class="row">
+                    <div class="col-5">
+                        <h5 style="color: #fff;"></h5><b>Trung tâm Tin học và Tính toán - Viện Hàn lâm KHCNVN</b></h5> <br /> <br />
+                        Liên hệ với Phòng Nội dung thông tin số khi phát hành lại thông tin trên Website này. <br /> 
+                        Địa chỉ: 18 Hoàng Quốc Việt, Cầu Giấy, Hà Nội. <br /> 
+                        Email: thongtin@vast.vn
+                    </div>
+                    <div class="col-2">
+                        <h5 style="color: #fff;"></h5><b>Về Trung tâm TH&TT</b></h5> <br /> <br />
+                        <ul >
+                            <li><a href="#">Giới Thiệu</a></li> 
+                            <li><a href="#">Cơ cấu tổ chức</a></li> 
+                            <li><a href="#">Bản tin</a></li> 
+                            <li><a href="#">Thông báo</a></li> 
+                            <li><a href="#">Chức năng</a></li> 
+                            <li><a href="#">Sản phẩm</a></li> 
+                            <li><a href="#">Hình ảnh</a></li> 
+                        </ul>
+                    </div>
+                    <div class="col-5 justify-content-center">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0591412047556!2d106.69259627481863!3d10.80678245863353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528c176a97ead%3A0x81d7ce6bc53ab3c8!2zVHJ1bmcgdMOibSB0aW4gaOG7jWMgVGjhu5FuZyBrw6ogS2h1IHbhu7FjIElJIChDT1NJU0hDTSk!5e0!3m2!1svi!2s!4v1700034309387!5m2!1svi!2s" height="220px" width="80%" style="border: 1px solid #000; margin-left: 100px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class=""></iframe>
+                    </div>
+                </div>
+                <hr>
+                <span>© 2023 COSIS.HCM - Developed by Thien Ngan</span>
                 <br />
-                Ghi rõ nguồn “ Trung tâm Tin học và Tính toán - Viện Hàn lâm Khoa học và Công nghệ Việt Nam”.
             </div>
         </section>
     

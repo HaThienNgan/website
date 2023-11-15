@@ -52,26 +52,17 @@
         </ul>
     </div>
     <div style=" padding-top: 15px; margin-bottom: 50px;">
-        <p style="color: #9F0311;"><b>Danh Mục</b></p>
-        <div style="margin-top: -10px;" class="row">
-            <div class="col-6">
-                <a href="">Bản tin</a>
-            </div>
-            <div class="col-6">
-                <a href="">Bản tin</a>
-            </div>
-            <div class="col-6">
-                <a href="">Bản tin</a>
-            </div>
-            <div class="col-6">
-                <a href="">Bản tin</a>
-            </div>
-            <div class="col-6">
-                <a href="">Bản tin</a>
-            </div>
-            <div class="col-6">
-                <a href="">Bản tin</a>
-            </div>
+        <p style="color: #9F0311;"><b>Hoạt động Đoàn thể</b></p>
+        <div style="" >
+            <ul style="list-style-type: none;">
+                <li><a href="">Mắt Thông Minh Smart-Eyes</a></li>
+                <hr>
+                <li><a href="">Thiết bị phát hiện vật thể lạ (FOD)</a></li>
+                <hr>
+                <li><a href="">Hệ thống Thám Không Thông tin Liên Lạc</a></li>    
+                <hr>
+                <li><a href="">Hệ thống Thám Không Thông tin Liên Lạc</a></li>               
+            </ul>
         </div>
     </div>
     <div style="border: 1px solid #9F0311; background-color: #FFE6E6; border-radius: 8px; padding: 10px; margin-bottom: 40px;"> 

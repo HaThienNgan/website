@@ -67,7 +67,7 @@
                         </a>
                     </li>
                     <li class="nav-links">
-                        <a style="text-decoration: none;" href="#">
+                        <a style="text-decoration: none;" href="doan-the.php">
                             <i class='bx bx-home-alt-2 icon'></i>
                             <span class="text nav-happy">Hoạt động đoàn thể</span>
                         </a>
@@ -85,7 +85,7 @@
                         </a>
                     </li>
                     <li class="nav-links">
-                        <a style="text-decoration: none;" href="#">
+                        <a style="text-decoration: none;" href="hinh-anh.php">
                             <i class='bx bx-image icon'></i>
                             <span class="text nav-text">Hình ảnh</span>
                         </a>

@@ -26,7 +26,7 @@
     <div class="container">
         <div class="row ">
             <div class="col-4">
-                <h4>Bản tin</h4>
+                <h4>Trung Tâm Tin Học và Tính Toán</h4>
             </div>
             <div class="col-8">
                 <nav class="navbar navbar-expand-lg">
