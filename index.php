@@ -121,8 +121,8 @@
                             ?>   
                                 <!-- First Blog Post -->
                                 <div  class="col-6 news-header" >
-                                    <a href="post.php?new_id=<?php echo $news_id; ?>"><?php echo $news_title; ?></a>
-                                    <div class="row">
+                                <div class="row">
+                                        <a href="post.php?new_id=<?php echo $news_id; ?>"><?php echo $news_title; ?></a>
                                         <div class="col-6">
                                             <img class="img-fluid" src="images/<?php echo $news_image; ?>" alt="">
                                         </div>
@@ -133,25 +133,6 @@
                         }
                     }
                 ?>
-                
-                <div  class="col-6 news-header" >
-                    <a href="#">Trung tâm Tin học và Tính toán chào mừng Ngày Phụ nữ Việt Nam 20/10/2023</a>
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="" alt="">
-                        </div>
-                        <div class="col-6">Nhân dịp kỉ niệm 93 năm Ngày Phụ nữ Việt Nam (20/10/1930), ngày 16/10/2023 Ban chấp hành Công đoàn và Đoàn Thanh niên Trung tâm Tin học và Tính toán tổ chức buổi gặp mặt thân mật với các cán bộ, chị em phụ nữ của Trung tâm.</div>
-                    </div>
-                </div>
-                <div  class="col-6 news-header" >
-                    <a href="#">Trung tâm Tin học và Tính toán chào mừng Ngày Phụ nữ Việt Nam 20/10/2023</a>
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="" alt="">
-                        </div>
-                        <div class="col-6">Nhân dịp kỉ niệm 93 năm Ngày Phụ nữ Việt Nam (20/10/1930), ngày 16/10/2023 Ban chấp hành Công đoàn và Đoàn Thanh niên Trung tâm Tin học và Tính toán tổ chức buổi gặp mặt thân mật với các cán bộ, chị em phụ nữ của Trung tâm.</div>
-                    </div>
-                </div>
                 
                 <button class="btn justify-content-end"><a href="ban-tin.php">See More</a></button>
             </div>

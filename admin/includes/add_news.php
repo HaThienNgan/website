@@ -19,7 +19,7 @@
 
         $query = "INSERT INTO news(news_category_id, news_title, news_author, news_date, news_image, news_content, news_tags, news_status)";
         $query.= " VALUES('{$news_category_id}','{$news_title}','{$news_author}', now() ,'{$news_image}','{$news_content}','{$news_tags}', '{$news_status}')";
-        $create_post_query = mysqli_query($connect, $query);
+        $create_news_query = mysqli_query($connect, $query);
 
         confirmQuery($create_news_query);
 

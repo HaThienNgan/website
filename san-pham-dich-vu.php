@@ -59,8 +59,18 @@
 </section>
 <section id="content-sanpham">
     <div class="container">
-        <div class="row">
-            <div class="col-10">
+        <div class="row justify-content-center g-2">
+            <div style="border: 1px solid #9F0311; border-radius: 8px; margin-right: 15px;" class="col-5">
+                <p style="text-align: center;">Dịch vụ Chữ Ký Số</p>
+                <img class="img-fluid mx-auto d-block" src="images/chukyso.jpg" alt="hinhanh-dichvu-chukyso" style="height: 300px;">
+                <p style="text-align: center;"><a href="#">Xem Chi Tiết</a></p>
+            </div>
+            <div style="border: 1px solid #9F0311; border-radius: 8px;" class="col-5">
+                <p style="text-align: center;">Dịch vụ Chữ Ký Số</p>
+                <img class="img-fluid mx-auto d-block" src="images/chukyso.jpg" alt="hinhanh-dichvu-chukyso" style="height: 300px;">
+                <p style="text-align: center;"><a href="#">Xem Chi Tiết</a></p>
+            </div>
+            <div class="col-5">
                 
             </div>
         </div>
