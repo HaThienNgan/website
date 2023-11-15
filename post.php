@@ -48,7 +48,9 @@
 <section id="content-post">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-9">
+            <?php include "includes/sidebar.php"; ?>
+            <div class="col-1"></div>
+            <div class="col-7">
                 <?php
                     if (isset($_GET['new_id'])){
                         $the_new_id = $_GET['new_id'];
@@ -115,6 +117,32 @@
                 <?php 
                     }
                 
+                }else if (isset($_GET['product_id'])){
+                    $the_product_id = $_GET['product_id'];
+                    
+                    $query = "SELECT * FROM product WHERE product_id = $the_product_id";
+                    $select_all_product_query = mysqli_query($connect, $query);
+                    
+                    while ($row = mysqli_fetch_assoc($select_all_product_query)){
+                        $product_id = $row['product_id'];
+                        $product_name = $row['product_name'];
+                        $product_content = $row['product_content'];
+                        $product_image = $row['product_image'];
+                ?>   
+
+                        <h4>
+                            <a href="#"><?php echo $product_name; ?></a>
+                        </h4>
+                        <img class="img-fluid" src="images/<?php echo $product_image; ?> " alt="" style="width: 900px;">
+                        <hr width="30%"
+                            color="red"
+                            align="center"
+                            size="5px" />
+                        <p><?php echo $product_content; ?></p>
+
+                        <hr>
+                <?php 
+                    }
                 }else{
                     header("Location: index.php");
                 }

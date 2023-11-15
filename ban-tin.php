@@ -42,6 +42,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#gioi-thieu">Giới Thiệu</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#gioi-thieu">Công Khai Thông tin Nhiệm vụ KH&CN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#gioi-thieu">Các Công Trình Ứng Dụng</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -107,71 +113,7 @@
                     }
                 ?>
             </div>
-            <div style="padding: 15px" class="col-4">
-                <div style="margin-bottom: 50px;"> 
-                    <p style="color: #9F0311;"><b>Tin Nổi Bật</b></p>
-                    <ul style="list-style-type: none;">
-                        <li><a href="">Trung Tâm Tin học và Tính toán tham gia Bài giảng đại chúng "Thị giác người - Thị giác máy"</a></li>
-                        <hr>
-                        <li><a href="">Trung Tâm Tin học và Tính toán tham gia Bài giảng đại chúng "Thị giác người - Thị giác máy"</a></li>
-                        <hr>
-                        <li><a href="">Trung Tâm Tin học và Tính toán tham gia Bài giảng đại chúng "Thị giác người - Thị giác máy"</a></li>
-                        <hr>
-                        <li><a href="">Trung Tâm Tin học và Tính toán tham gia Bài giảng đại chúng "Thị giác người - Thị giác máy"</a></li>
-                    </ul>
-                </div>
-
-                <div style="border: 1px solid #9F0311; background-color: #FFE6E6; border-radius: 8px; padding: 10px; margin-bottom: 40px;"> 
-                    <p style="color: #9F0311; margin-left: 5px"><b>Thông báo Mới Nhất</b></p>
-                    <ul style="list-style-type: none;">
-                        <li><a href="">Mắt Thông Minh Smart-Eyes</a></li>
-                        <hr>
-                        <li><a href="">Thiết bị phát hiện vật thể lạ (FOD)</a></li>
-                        <hr>
-                        <li><a href="">Hệ thống Thám Không Thông tin Liên Lạc</a></li>    
-                        <hr>
-                        <li><a href="">Hệ thống Thám Không Thông tin Liên Lạc</a></li>               
-                    </ul>
-                </div>
-                
-                <div style=" padding-top: 15px; margin-bottom: 50px;">
-                    <p style="color: #9F0311;"><b>Danh Mục</b></p>
-                    <div style="margin-top: -10px;" class="row">
-                        <div class="col-6">
-                            <a href="">Bản tin</a>
-                        </div>
-                        <div class="col-6">
-                            <a href="">Bản tin</a>
-                        </div>
-                        <div class="col-6">
-                            <a href="">Bản tin</a>
-                        </div>
-                        <div class="col-6">
-                            <a href="">Bản tin</a>
-                        </div>
-                        <div class="col-6">
-                            <a href="">Bản tin</a>
-                        </div>
-                        <div class="col-6">
-                            <a href="">Bản tin</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="border: 1px solid #9F0311; background-color: #FFE6E6; border-radius: 8px; padding: 10px; margin-bottom: 40px;"> 
-                    <p style="color: #9F0311; margin-left: 5px"><b>Các Công Trình Ứng Dụng</b></p>
-                    <ul style="list-style-type: none;">
-                        <li><a href="">Mắt Thông Minh Smart-Eyes</a></li>
-                        <hr>
-                        <li><a href="">Thiết bị phát hiện vật thể lạ (FOD)</a></li>
-                        <hr>
-                        <li><a href="">Hệ thống Thám Không Thông tin Liên Lạc</a></li>    
-                        <hr>
-                        <li><a href="">Hệ thống Thám Không Thông tin Liên Lạc</a></li>               
-                    </ul>
-                </div>
-                
-            </div>
+            <?php include "includes/sidebar.php"; ?>
         </div>
     </div>
 </section>
