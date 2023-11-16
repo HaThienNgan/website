@@ -69,7 +69,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-10">
-                <a style="text-decoration: none;" href="#"><b>1. Ban Lãnh Đạo</b></a>
+                <a style="text-decoration: none;" href="phong-ban.php?phong-ban=<?php echo 1; ?>"><b>1. Ban Lãnh Đạo</b></a>
                 <ul>
                     <li>Điều hành, quản lý trực tiếp mọi lĩnh vực hoạt động của Trung tâm.</li>
                 </ul>

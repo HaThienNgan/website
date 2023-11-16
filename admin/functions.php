@@ -68,8 +68,8 @@
             echo "<tr>";
             echo "<td> {$structure_id} </td>";
             echo "<td> {$structure_title} </td>";
-            echo "<td> <a href='categories.php?delete={$structure_id}'> Delete </a></td>";
-            echo "<td> <a href='categories.php?edit={$structure_id}'> Edit </a></td>";
+            echo "<td> <a href='admin_phongban.php?delete={$structure_id}'> Delete </a></td>";
+            echo "<td> <a href='admin_phongban.php?edit={$structure_id}'> Edit </a></td>";
             echo "</tr>";
         }
     }

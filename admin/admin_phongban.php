@@ -18,49 +18,30 @@
                         <small>Author</small>
                     </h1>
 
-                    <div class="col-xs-6">
-                        <?php
-                            insertCategories();
-                        ?>
+                    <?php
+                        if(isset($_GET['source'])){
+                            $source = $_GET['source'];
+                        }else{
+                            $source = '';
+                        }
 
-                        <form action="" method="post">
-                            <div class="form-group">
-                                <label for="structure_title">Thêm Phòng Ban</label>
-                                <input class="form-control" type="text" name="structure_title">
-                            </div>
-                            <div class="form-group">
-                                <input class="btn btn-dark" type="submit" name="submit" value="Add Phòng Ban">
-                            </div>
-                        </form>
+                        switch($source){
+                            case 'view_all_department';
+                            include "includes/view_all_department.php";
+                            break;
+                            case 'edit_department';
+                            include "includes/edit_department.php";
+                            break;
+                            case '45';
+                            echo "NICE 45";
+                            break;
 
-                        <?php  
-                            if (isset($_GET['edit'])){
-                                $cat_id = $_GET['edit'];
-                                include "includes/update_categories.php";
-                            }
-                        ?>
-                    </div>
+                            default:
+                            include "includes/add_structure.php";
+                            break;
+                        }
 
-                    <div class="col-xs-6">
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Category Title</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php //Find category query
-                                    findAllCategories();          
-                                ?>
-
-                                <?php //Delete Query
-                                    deleteCategories();
-                                ?>
-                            </tbody>
-                        </table>
-                    </div>
+                    ?>
 
                 </div>
             </div>

@@ -118,10 +118,10 @@
                         <a href="./admin_phongban.php">Tất cả phòng ban</a>
                     </li>
                     <li>
-                        <a href="#">Tất cả Thành viên</a>
+                        <a href="admin_phongban.php?source=view_all_department">Tất cả Thành viên</a>
                     </li>
                     <li>
-                        <a href="#">Thêm thành viên</a>
+                        <a href="admin_phongban.php?source=add_department">Thêm thành viên</a>
                     </li>
                 </ul>
             </li>
