@@ -66,7 +66,7 @@
                     echo "<td> <img width='100px' src='../images/{$department_image}' alt='image'> </td>";
 
                     echo "<td> {$department_descrip} </td>";
-                    echo "<td> <a onClick=\' javascript: return confirm('Are you sure you want to delete? ') \' href='admin-phongban.php?delete={$department_id}'> Delete </a></td>";
+                    echo "<td> <a onClick=\' javascript: return confirm('Are you sure you want to delete? ') \' href='admin_phongban.php?source=view_all_department&delete={$department_id}'> Delete </a></td>";
                     echo "<td> <a href='admin_phongban.php?source=edit_department&department_id={$department_id}'> Edit </a></td>";
                     echo "</tr>";
                 }
@@ -80,6 +80,6 @@
         $the_department_id = $_GET['delete'];
         $query = "DELETE FROM department WHERE department_id='$the_department_id'";
         $delete_query = mysqli_query($connect, $query);
-        header("Location: admin_phongban.php");
+        header("Location: admin_phongban.php?source=view_all_department");
     }
 ?>

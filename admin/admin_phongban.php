@@ -29,11 +29,11 @@
                             case 'view_all_department';
                             include "includes/view_all_department.php";
                             break;
+                            case 'add_department';
+                            include "includes/add_department.php";
+                            break;
                             case 'edit_department';
                             include "includes/edit_department.php";
-                            break;
-                            case '45';
-                            echo "NICE 45";
                             break;
 
                             default:

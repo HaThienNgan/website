@@ -1,17 +1,16 @@
 <?php 
 
     if(isset($_POST['create_department'])){
-        $department_id = $row['department_id'];
-        $department_struc_id = $row['department_struc_id'];
-        $department_job_title = $row['department_job_title'];
-        $department_name = $row['department_name'];
-        $department_phone = $row['department_phone'];
-        $department_email = $row['department_email'];
+        $department_struc_id = $_POST['department_struc_id'];
+        $department_job_title = $_POST['department_job_title'];
+        $department_name = $_POST['department_name'];
+        $department_phone = $_POST['department_phone'];
+        $department_email = $_POST['department_email'];
 
         $department_image = $_FILES['department_image']['name'];
         $department_image_temp = $_FILES['department_image']['tmp_name'];
 
-        $department_descrip = $row['department_descrip'];
+        $department_descrip = $_POST['department_descrip'];
 
         move_uploaded_file($department_image_temp, "../images/$department_image");
 
@@ -35,7 +34,7 @@
     </div>
     <div class="form-group"> 
         <label for="department_struc_id">Phòng Ban: </label>
-        <select name="news_category_id" id="department_struc_id">
+        <select name="department_struc_id" id="department_struc_id">
             <?php 
 
                 $query = "SELECT * FROM structure";
