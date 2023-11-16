@@ -126,21 +126,69 @@
                     while ($row = mysqli_fetch_assoc($select_all_product_query)){
                         $product_id = $row['product_id'];
                         $product_name = $row['product_name'];
+                        $product_intro = $row['product_intro'];
                         $product_content = $row['product_content'];
                         $product_image = $row['product_image'];
-                ?>   
+                ?>          
+                        <div style="border: 0px solid; background-color: #EEE2DE; padding: 10px; padding-top: 20px; border-radius: 5px; z-index: 10;" class="row">
+                            <div class="col-6">
+                                <img class="img-fluid" src="images/<?php echo $product_image; ?> " alt="" style="width: 900px;">
+                                <hr width="30%"
+                                    color="red"
+                                    align="center"
+                                    size="5px" />
+                            </div>
+                            <div class="col-6">
 
-                        <h4>
-                            <a href="#"><?php echo $product_name; ?></a>
-                        </h4>
-                        <img class="img-fluid" src="images/<?php echo $product_image; ?> " alt="" style="width: 900px;">
-                        <hr width="30%"
-                            color="red"
-                            align="center"
-                            size="5px" />
-                        <p><?php echo $product_content; ?></p>
-
-                        <hr>
+                                <h4>
+                                    <b><a href="#"><?php echo $product_name; ?></a></b> 
+                                </h4>
+                                <br />
+                                <b>Giới thiệu Sản phẩm:</b>
+                                <p><?php echo $product_intro; ?></p>
+                            </div>
+                        </div>
+                        <div style="border: 0px solid; background-color: #EEE2DE; padding: 10px; padding-top: 20px; border-radius: 3px; z-index: 10;" class="row">
+                            <div class="col-12">
+                                Được phát triển bởi: 
+                            </div>
+                        </div>
+                        <div style="border: 0px solid; background-color: #EEE2DE; padding: 10px; padding-top: 20px; border-radius: 3px; z-index: 10;" class="row">
+                            <div class="col-12">
+                                <h5><b>Mô Tả Chi Tiết</b></h5>
+                                <p><?php echo $product_content; ?></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h5><b>Các sản phẩm khác</b></h5>
+                            <div style="border: 3px solid #fff; background-color: #EEE2DE; border-radius: 5px; padding: 10px; z-index: 10;" class="col-4">
+                                <a href="post.php?product_id=<?php echo 1; ?>">
+                                    
+                                        <img class="img-fluid" src="images/<?php echo $product_image; ?> " alt="hinhanh-sanpham">
+                                        <b><?php echo $product_name; ?></b>
+                                        <br /> <br /> <br />
+                                        Phát triển bởi: xxxxxx
+                                </a>
+                            </div>
+                            <div style="border: 3px solid #fff; background-color: #EEE2DE; border-radius: 5px; padding: 10px; z-index: 10;" class="col-4">
+                                <a href="post.php?product_id=<?php echo 2; ?>">
+                                    
+                                        <img class="img-fluid" src="images/<?php echo $product_image; ?> " alt="hinhanh-sanpham">
+                                        <b><?php echo $product_name; ?></b>
+                                        <br /> <br /> <br />
+                                        Phát triển bởi: xxxxxx
+                                </a>
+                            </div>
+                            <div style="border: 3px solid #fff; background-color: #EEE2DE; border-radius: 5px; padding: 10px; z-index: 10;" class="col-4">
+                                <a href="post.php?product_id=<?php echo 2; ?>">
+                                    
+                                        <img class="img-fluid" src="images/<?php echo $product_image; ?> " alt="hinhanh-sanpham">
+                                        <b><?php echo $product_name; ?></b>
+                                        <br /> <br /> <br />
+                                        Phát triển bởi: xxxxxx
+                                </a>
+                            </div>
+                        </div>
                 <?php 
                     }
                 }else{
