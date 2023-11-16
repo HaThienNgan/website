@@ -117,3 +117,5 @@
         <input class="btn btn-dark" type="submit" name="update_news" value="Publish News">
     </div>
 </form>
+
+<?php include "includes/admin_footer.php"; ?>

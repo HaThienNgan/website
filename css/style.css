@@ -370,3 +370,13 @@ body {
     border: 0.5px solid #B9B4C7;
     text-align: center;
 }
+
+/* ========INDEX.CSS */
+div a {
+    text-decoration: none;
+    color: #9F0311;
+}
+
+div a:hover {
+    text-decoration: underline;
+}
