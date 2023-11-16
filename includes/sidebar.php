@@ -53,7 +53,7 @@
     </div>
     <div style=" padding-top: 15px; margin-bottom: 50px;">
         <p style="color: #9F0311;"><b>Hoạt động Đoàn thể</b></p>
-        <div style="" >
+        <div>
             <ul style="list-style-type: none;">
                 <li><a href="">Mắt Thông Minh Smart-Eyes</a></li>
                 <hr>
