@@ -78,7 +78,7 @@
                     while ($row = mysqli_fetch_assoc($select_all_noti_query)){
                         $noti_id = $row['noti_id'];
                         $noti_title = $row['noti_title'];
-                        $noti_content = $row['noti_content'];
+                        $noti_content = substr($row['noti_content'],0,10);
                         $noti_date = $row['noti_date'];
                         $noti_image = $row['noti_image'];
                             ?>   

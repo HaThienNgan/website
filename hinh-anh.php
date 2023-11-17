@@ -49,10 +49,6 @@
                 <h5><b>Danh Mục Hình Ảnh</b></h5>
                 <ul>
                     <?php
-                        // if(isset($_GET['hinh-anh'])){
-                        //     $the_image_id = $_GET['hinh-anh'];
-                        // }
-
                         $query = "SELECT * FROM image";
                         $select_all_image_query = mysqli_query($connect, $query);
                         
@@ -72,16 +68,16 @@
                 </ul>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-7">
                 <?php
                     if(isset($_GET['hinh-anh'])){
                         $the_image_id = $_GET['hinh-anh'];
 
-                        $query_image = "SELECT image_content FROM image";
+                        $query_image = "SELECT * FROM image";
                         $select_image_query = mysqli_query($connect, $query_image);
 
-                        while ($row = mysqli_fetch_assoc($select_all_image_query)){
+                        while ($row = mysqli_fetch_assoc($select_image_query)){
                             $image_id = $row['image_id'];
                             $image_title = $row['image_title'];
                             $image_content = $row['image_content'];

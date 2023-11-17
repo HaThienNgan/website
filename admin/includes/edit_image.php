@@ -1,6 +1,6 @@
 <?php 
-    if(isset($_GET['image_id'])){
-        $the_image_id = $_GET['image_id'];
+    if(isset($_GET['edit'])){
+        $the_image_id = $_GET['edit'];
     }
 
     $query = "SELECT * FROM image WHERE image_id = $the_image_id";

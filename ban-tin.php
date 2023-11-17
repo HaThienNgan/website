@@ -87,7 +87,7 @@
                         $news_author = $row['news_author'];
                         $news_date = $row['news_date'];
                         $news_image = $row['news_image'];
-                        $news_content = substr($row['news_content'],0,400);
+                        $news_content = substr($row['news_content'],0,300);
                         $news_tags = $row['news_tags'];
                         $news_status = $row['news_status'];
 
