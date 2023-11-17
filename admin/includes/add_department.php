@@ -21,7 +21,7 @@
         confirmQuery($create_department_query);
 
         $the_department_id = mysqli_insert_id($connect);
-        echo "<p class='bg-success'>Department Created successfully!! . <a href='admin_phongban.php'>Edit More </a> </p>";
+        echo "<p class='bg-success'>Department Created successfully!! . <a href='department.php'>Edit More </a> </p>";
     }
 
 ?>

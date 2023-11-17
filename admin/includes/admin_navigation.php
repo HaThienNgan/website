@@ -101,13 +101,13 @@
                 <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> News <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Bản Tin <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo" class="collapse">
                     <li>
-                        <a href="./news.php">View All News</a>
+                        <a href="./news.php">Quản lí Bản Tin</a>
                     </li>
                     <li>
-                        <a href="news.php?source=add_news">Add News</a>
+                        <a href="news.php?source=add_news">Thêm Bản Tin</a>
                     </li>
                 </ul>
             </li>
@@ -115,13 +115,13 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#phong-ban"><i class="fa fa-fw fa-arrows-v"></i> Phòng Ban <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="phong-ban" class="collapse">
                     <li>
-                        <a href="./admin_phongban.php">Tất cả phòng ban</a>
+                        <a href="./department.php">Tất cả phòng ban</a>
                     </li>
                     <li>
-                        <a href="admin_phongban.php?source=view_all_department">Tất cả Thành viên</a>
+                        <a href="department.php?source=view_all_department">Tất cả Thành viên</a>
                     </li>
                     <li>
-                        <a href="admin_phongban.php?source=add_department">Thêm thành viên</a>
+                        <a href="department.php?source=add_department">Thêm thành viên</a>
                     </li>
                 </ul>
             </li>

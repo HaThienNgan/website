@@ -53,7 +53,7 @@
         $update_department = mysqli_query($connect, $query);
         confirmQuery($update_department);
 
-        echo "<p class='bg-success'>Department Updated successfully!! . <a href='admin_phongban.php'>Edit More Department</a> </p>";
+        echo "<p class='bg-success'>Department Updated successfully!! . <a href='department.php'>Edit More Department</a> </p>";
     }
 
 ?>
