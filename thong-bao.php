@@ -92,7 +92,7 @@
                                         <img class="img-fluid" src="images/<?php echo $noti_image; ?> " alt="" >
                                     </a>
                                 </div>
-                                <p><?php echo $noti_content ?></p>
+                                <p><?php echo "<div>{$noti_content}</div> '" ?></p>
                                 <a class="btn btn-outline-dark" href="post.php?noti_id=<?php echo $noti_id ?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
                                 <div style="background-color:#9F0311; height: 2px; margin-top:25px; margin-bottom: 25px;"></div>
                             <?php

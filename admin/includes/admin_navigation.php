@@ -126,7 +126,15 @@
                 </ul>
             </li>
             <li>
-                <a href="./categories.php"><i class="fa fa-fw fa-wrench"></i> Categories </a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#noti"><i class="fa fa-fw fa-arrows-v"></i> Thông Báo <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="noti" class="collapse">
+                    <li>
+                        <a href="./notification.php">Tất cả thông báo</a>
+                    </li>
+                    <li>
+                        <a href="notification.php?source=add_notification">Thêm Thông Báo Mới</a>
+                    </li>
+                </ul>
             </li>
             <li class="">
                 <a href="comments.php"><i class="fa fa-fw fa-file"></i> Comment</a>
