@@ -101,7 +101,7 @@
                 <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Bản Tin <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i style="margin-right: 5px;" class="fa fa-newspaper-o"></i> Bản Tin <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo" class="collapse">
                     <li>
                         <a href="./news.php">Quản lí Bản Tin</a>
@@ -126,13 +126,24 @@
                 </ul>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#noti"><i class="fa fa-fw fa-arrows-v"></i> Thông Báo <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#noti"><i style="margin-right: 5px;" class="fa fa-bell-o""></i> Thông Báo <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="noti" class="collapse">
                     <li>
                         <a href="./notification.php">Tất cả thông báo</a>
                     </li>
                     <li>
                         <a href="notification.php?source=add_notification">Thêm Thông Báo Mới</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#image"><i style="margin-right: 5px;" class="fa fa-picture-o"></i> Hình Ảnh <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="image" class="collapse">
+                    <li>
+                        <a href="./image.php">Danh mục Hình Ảnh</a>
+                    </li>
+                    <li>
+                        <a href="image.php?source=add_image">Thêm Danh mục</a>
                     </li>
                 </ul>
             </li>

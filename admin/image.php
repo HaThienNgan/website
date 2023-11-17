@@ -25,15 +25,15 @@
                         }
 
                         switch($source){
-                            case 'add_notification';
-                            include "includes/add_notification.php";
+                            case 'add_image';
+                            include "includes/add_image.php";
                             break;
-                            case 'edit_notification';
-                            include "includes/edit_notification.php";
+                            case 'edit_image';
+                            include "includes/edit_image.php";
                             break;
 
                             default:
-                            include "includes/view_all_notification.php";
+                            include "includes/view_all_list_image.php";
                             break;
                         }
 

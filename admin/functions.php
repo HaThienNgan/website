@@ -68,8 +68,8 @@
             echo "<tr>";
             echo "<td> {$structure_id} </td>";
             echo "<td> {$structure_title} </td>";
-            echo "<td> <a href='admin_phongban.php?delete={$structure_id}'> Delete </a></td>";
-            echo "<td> <a href='admin_phongban.php?edit={$structure_id}'> Edit </a></td>";
+            echo "<td> <a href='department.php?delete={$structure_id}'> Delete </a></td>";
+            echo "<td> <a href='department.php?edit={$structure_id}'> Edit </a></td>";
             echo "</tr>";
         }
     }
@@ -80,7 +80,56 @@
             $the_struc_id = $_GET['delete'];
             $query = "DELETE FROM structure WHERE structure_id = {$the_struc_id} ";
             $delete_query = mysqli_query($connect, $query);
-            header("Location: admin_phongban.php");
+            header("Location: department.php");
+        }
+    }
+
+    function insertListImage(){
+        global $connect;
+        if (isset($_POST['submit'])){
+            $image_title = $_POST['image_title'];
+
+             if($image_title == "" || empty($image_title)){
+                echo '<div class="alert alert-danger" role="alert">Please enter a title</div>';
+             }else{
+                 $query = "INSERT INTO image(image_title)";
+                 $query .= " VALUES('{$image_title}') ";
+
+                 $create_list_image_query = mysqli_query($connect, $query);
+
+                 if(!$create_list_image_query){
+                     echo '<div class="alert alert-danger" role="alert">There was an error creating the list image</div>';
+                 }
+
+             }
+        }
+    }
+
+    function findAllListImage(){
+        global $connect;
+        $query = "SELECT * FROM image ";
+        $select_list_image = mysqli_query($connect, $query);
+        while ($row = mysqli_fetch_assoc($select_list_image)){
+            $image_id = $row['image_id'];
+            $image_title = $row['image_title'];
+            $image_content = $row['image_content'];
+
+            echo "<tr>";
+            echo "<td> {$image_id} </td>";
+            echo "<td> {$image_title} </td>";
+            echo "<td> <a href='image.php?delete={$image_id}'> Delete </a></td>";
+            echo "<td> <a href='image.php?source=edit_image&edit={$image_id}'> Edit </a></td>";
+            echo "</tr>";
+        }
+    }
+
+    function deleteListImage(){
+        global $connect;
+        if(isset($_GET['delete'])){
+            $the_list_image_id = $_GET['delete'];
+            $query = "DELETE FROM image WHERE image_id = {$the_list_image_id} ";
+            $delete_query = mysqli_query($connect, $query);
+            header("Location: image.php");
         }
     }
 
