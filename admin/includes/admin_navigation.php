@@ -147,8 +147,16 @@
                     </li>
                 </ul>
             </li>
-            <li class="">
-                <a href="comments.php"><i class="fa fa-fw fa-file"></i> Comment</a>
+            <li>
+                <a href="javascript:;" data-toggle="collapse" data-target="#activities"><i style="margin-right: 5px;" class="fa fa-newspaper-o"></i> Hoạt Động Đoàn Thể <i class="fa fa-fw fa-caret-down"></i></a>
+                <ul id="activities" class="collapse">
+                    <li>
+                        <a href="./activities.php">Quản lí Các HĐĐT</a>
+                    </li>
+                    <li>
+                        <a href="activities.php?source=add_activities">Thêm HĐĐT</a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="javascript:;" data-toggle="collapse" data-target="#user"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>

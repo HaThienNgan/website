@@ -191,15 +191,39 @@
                             $noti_image = $row['noti_image'];
                             $noti_content = substr($row['noti_content'],0,100);
                             ?>   
-                                    <a href="post.php?noti_id=<?php echo $noti_id; ?>"><?php echo $noti_title; ?></a>
-                                    <p><?php echo $noti_date; ?></p>
+                                <a href="post.php?noti_id=<?php echo $noti_id; ?>"><?php echo $noti_title; ?></a>
+                                <p><?php echo $noti_date; ?></p>
                                 
                             <?php
                             }
                     ?>
                 </div>
-                <div class="col-7">
+                <div class="col-1"></div>
+                <div class="col-6">
                     <h5 class="title">Hoạt Động Đoàn Thể</h5>
+                    <?php 
+                        $query = "SELECT * FROM activities ORDER BY activity_date DESC LIMIT 6";
+                        $select_acti_query = mysqli_query($connect, $query);
+                    
+                        while ($row = mysqli_fetch_assoc($select_acti_query)){
+                            $activity_id = $row['activity_id'];
+                            $activity_title = $row['activity_title'];
+                            $activity_author = $row['activity_author'];
+                            $activity_date = $row['activity_date'];
+                            $activity_image = $row['activity_image'];
+                            $activity_tags = $row['activity_tags'];
+                            $activity_content = substr($row['activity_content'],0,100);
+                            $activity_status = $row['activity_status'];
+
+                            if($news_status == 'published'){
+                    ?>   
+                                <a href="post.php?acti_id=<?php echo $activity_id; ?>"><?php echo $activity_title; ?></a>
+                                <p><?php echo $activity_date; ?></p>      
+                    <?php
+                            }
+                        }
+                    ?>
+                    
                 </div>
                 <button class="btn justify-content-end"><a href="thong-bao.php">See More</a></button>
             </div>
