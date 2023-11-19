@@ -21,6 +21,9 @@
     a:hover {
         color: #000;
     }
+    .content-img img{
+        width: 400px;
+    }
 </style>
 <section id="header">
     <div class="container">
@@ -191,6 +194,45 @@
                         </div>
                 <?php 
                     }
+                }else if (isset($_GET['acti_id'])){
+                    $the_activity_id = $_GET['acti_id'];
+
+                    $view_query = "UPDATE activities SET activity_views = activity_views + 1 WHERE activity_id = '$the_activity_id' ";
+                    $send_query = mysqli_query($connect, $view_query);
+                    if (!$send_query){
+                        die("Error:" . mysqli_error($connect));
+                    }
+                    
+                    $query = "SELECT * FROM activities WHERE activity_id = $the_activity_id";
+                    $select_all_activities_query = mysqli_query($connect, $query);
+                    
+                    while ($row = mysqli_fetch_assoc($select_all_activities_query)){
+                        $activity_id = $row['activity_id'];
+                        $activity_title = $row['activity_title'];
+                        $activity_author = $row['activity_author'];
+                        $activity_date = $row['activity_date'];
+                        $activity_image = $row['activity_image'];
+                        $activity_content = $row['activity_content'];
+                        $activity_tags = $row['activity_tags'];
+                ?>
+                        <h4>
+                        <a href="#"><b><?php echo $activity_title ?></b></a>
+                        </h4>
+                        <p class="lead">
+                            Đăng bởi <a href="index.php"><?php echo $activity_author ?></a>
+                        </p>
+                        <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $activity_date ?></p>
+                        <img class="img-fluid" src="images/<?php echo $activity_image; ?> " alt="" >
+                        <hr>
+                        <div class="content-img">
+                            <p><?php echo $activity_content ?></p>
+                        </div>
+                        
+
+                        <hr>
+                <?php 
+                    }
+
                 }else{
                     header("Location: index.php");
                 }
