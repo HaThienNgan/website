@@ -13,46 +13,58 @@
         list-style-type: none;
     }
 </style>
-    <section id="header">
+    <section style="height: 120px;" id="header">
         <div class="container">
             <div class="row ">
-                <div class="col-2">
-                    <h4>WEBSITE</h4>
+                <div class="col-6">
+                    <h4>TRUNG TÂM TIN HỌC THỐNG KÊ KHU VỰC II</h4>
+                    <h5 style="color: #fff;">Center Of Statistical Infomatics Services No 2</h5>
                 </div>
-                <div class="col-10">
-                    <nav class="navbar navbar-expand-lg">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav navbarSupportedContent" >
+                <nav style="background-color: #9F0311;" class="navbar navbar-expand-lg col-6">
+                    <div style="background-color: #9F0311;" class="container-fluid">
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    <a class="nav-link active" aria-current="page" href="#home">Trang Chủ</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                        Về Chúng Tôi
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#introduction">Giới Thiệu</a></li>
+                                        <li><a class="dropdown-item" href="chuc-nang.php">Chức Năng Nhiệm Vụ</a></li>
+                                        <li><a class="dropdown-item" href="co-cau-to-chuc.php">Cơ Cấu Tổ Chức</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#news" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Tin Tức
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li >
+                                            <a class="dropdown-item" href="ban-tin.php">Bản Tin</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="doan-the.php">Hoạt Động Đoàn Thể</a></li>
+                                        <li><a class="dropdown-item" href="thong-bao.php">Thông Báo</a></li>
+                                        <li><a class="dropdown-item" href="hinh-anh.php">Hình Ảnh</a></li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#introduction">Giới Thiệu</a>
+                                    <a class="nav-link" href="san-pham-dich-vu.php">Sản Phẩm</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#product">Sản Phẩm</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#news">Bản Tin</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#noti">Thông Báo</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#lib-img">Thư Viện Ảnh</a>
+                                    <a class="nav-link" href="#">Liên Hệ</a>
                                 </li>
                             </ul>
                         </div>
-                    </nav>
-                </div>
+                    </div>
+                </nav>
             </div>
         </section>
 
         <section class="home container">
-            <div class="row" id="#">
+            <div class="row" id="home">
                 <div class="col">
                     <img class="img-fluid" src="images/banner.jpg" alt="banner">
                 </div>
@@ -139,6 +151,11 @@
                                         </div>
                                         <div class="col-6">
                                             <a href="post.php?new_id=<?php echo $news_id; ?>"><?php echo $news_title; ?></a>
+                                            <br />
+                                            <p>
+                                                <i class='bx bxs-calendar'></i>
+                                                <?php echo $news_date ?>
+                                            </p>
                                             <div>
                                                 <?php echo $news_content; ?>
                                             </div>
@@ -157,52 +174,32 @@
                     <button class="btn"><a href="ban-tin.php">See More</a></button> 
                 </div>
             </div>
-            <div class="row justify-content-center" id="noti">
-                <h5 class="title">
-                    Thông Báo
-                </h5>
-                <?php
-                    $query = "SELECT * FROM notification ORDER BY noti_date DESC LIMIT 6";
-                    $select_noti_query = mysqli_query($connect, $query);
-                    
-                    while ($row = mysqli_fetch_assoc($select_noti_query)){
-                        $noti_id = $row['noti_id'];
-                        $noti_title = $row['noti_title'];
-                        $noti_date = $row['noti_date'];
-                        $noti_image = $row['noti_image'];
-                        $noti_content = substr($row['noti_content'],0,100);
-                        ?>   
-                            <div class="col-7">
-                                <p><?php echo $noti_date; ?></p>
-                                <a href="post.php?noti_id=<?php echo $noti_id; ?>"><?php echo $noti_title; ?></a>
-                            </div>
-                        <?php
-                        }
-                    ?>
+            <div class="row" id="noti">
+                <div class="col-5">
+                    <h5 class="title">
+                        Thông Báo
+                    </h5>
                 
-                <div class="col-7">
-                    <p>08/11/2023</p>
-                    <a href="#">
-                        Trung tâm Tin học và Tính toán – Viện Hàn lâm Khoa học và Công nghệ Việt Nam thông báo tuyển viên chức
-                    </a>
+                    <?php
+                        $query = "SELECT * FROM notification ORDER BY noti_date DESC LIMIT 6";
+                        $select_noti_query = mysqli_query($connect, $query);
+                        
+                        while ($row = mysqli_fetch_assoc($select_noti_query)){
+                            $noti_id = $row['noti_id'];
+                            $noti_title = $row['noti_title'];
+                            $noti_date = $row['noti_date'];
+                            $noti_image = $row['noti_image'];
+                            $noti_content = substr($row['noti_content'],0,100);
+                            ?>   
+                                    <a href="post.php?noti_id=<?php echo $noti_id; ?>"><?php echo $noti_title; ?></a>
+                                    <p><?php echo $noti_date; ?></p>
+                                
+                            <?php
+                            }
+                    ?>
                 </div>
                 <div class="col-7">
-                    <p>08/11/2023</p>
-                    <a href="#">
-                        Trung tâm Tin học và Tính toán – Viện Hàn lâm Khoa học và Công nghệ Việt Nam thông báo tuyển viên chức
-                    </a>
-                </div>
-                <div class="col-7">
-                    <p>08/11/2023</p>
-                    <a href="#">
-                        Trung tâm Tin học và Tính toán – Viện Hàn lâm Khoa học và Công nghệ Việt Nam thông báo tuyển viên chức
-                    </a>
-                </div>
-                <div class="col-7">
-                    <p>08/11/2023</p>
-                    <a href="#">
-                        Trung tâm Tin học và Tính toán – Viện Hàn lâm Khoa học và Công nghệ Việt Nam thông báo tuyển viên chức
-                    </a>
+                    <h5 class="title">Hoạt Động Đoàn Thể</h5>
                 </div>
                 <button class="btn justify-content-end"><a href="thong-bao.php">See More</a></button>
             </div>
@@ -211,8 +208,8 @@
                 <div class="col-9">
                     <div class="row">
                         <h5 class="title">Thư Viện Ảnh</h5>
-
                         <div class="col-3">
+
                             <img class="img-fluid" src="images/chukyso.jpg" alt="">
                         </div>
                         <div class="col-3">
@@ -276,6 +273,9 @@
                 <br />
             </div>
         </section>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
 <?php 
     include "includes/footer.php";
