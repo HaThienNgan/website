@@ -16,15 +16,19 @@
 
     <section class="home container">
         <div class="row" id="home">
-            <div class="col">
+            <div class="col-md-12">
                 <img class="img-fluid" src="images/banner.jpg" alt="banner">
             </div>
         </div>
-        <div class="row justify-content-center" id="introduction">
-            <h5 class="title text-center"><a style="text-decoration: none; color: #9F0311;" href="#">Giới thiệu Trung tâm Tin học và Tính toán</a></h5>
-            <div class="col-8"> 
-                Trung tâm Tin học và Tính toán – Viện Hàn lâm Khoa học và Công nghệ Việt Nam (Tên giao dịch tiếng Anh: Center for Informatics and Computing) được thành lập theo Quyết định số 107/QĐ-KHCNVN ngày 16 tháng 2 năm 2009 của Chủ tịch Viện Khoa học và Công nghệ Việt Nam với tên gọi là Trung tâm Tin học. Ngày 19/02/2013 Chủ tịch Viện Hàn lâm Khoa học và Công nghệ Việt Nam ban hành quyết định số 62/QĐ-VHL về việc chuyển đổi Trung tâm Tin học thành Trung tâm Tin học và Tính toán. Từ khi thành lập đến nay, mặc dù là đơn vị mới còn gặp nhiều khó khăn, Ban Lãnh đạo và toàn thể nhân viên của Trung tâm đã nỗ lực vượt bậc thực hiện các..
-                <a href="gioi-thieu.php">Xem Thêm>></a>
+        <div class="row justify-content-end" id="introduction">
+            <h5 class="title text-center">
+     bottom: 10px" href="#">Giới thiệu Trung tâm Tin học và Tính toán</a>
+            </h5>
+            <div class="col-md-6"> 
+                Trung tâm Tin học và Tính toán – Viện Hàn lâm Khoa học và Công nghệ Việt Nam (Tên giao dịch tiếng Anh: Center for Informatics and Computing) được thành lập theo Quyết định số 107/QĐ-KHCNVN ngày 16 tháng 2 năm 2009 của Chủ tịch Viện Khoa học và Công nghệ Việt Nam với tên gọi là Trung tâm Tin học. Ngày 19/02/2013 Chủ tịch Viện Hàn lâm Khoa học và Công nghệ Việt Nam ban hành quyết định số 62/QĐ-VHL về việc chuyển đổi Trung tâm Tin học thành Trung tâm Tin học và Tính toán . . .
+                <div style="padding-top: 10px;" class="d-grid d-md-flex justify-content-md-begin">
+                    <button class="btn btn-outline-danger"><a href="gioi-thieu.php">Tìm hiểu thêm về chúng tôi <i class='bx bx-right-arrow-alt'></i></a></button>
+                </div>
             </div>
         </div>
         <div class="row tabs" id="product">
@@ -32,7 +36,7 @@
             <div class="tab-content">
                 <div class="tab-pane active">
                     <div class="row">
-                        <div class="col-8">
+                        <div class="col-md-8">
                             <h4>Chữ kí điện tử</h4> 
                             <br>
                             <p>
@@ -44,7 +48,7 @@
                             
                         </div>
                     
-                        <div class="col-4">
+                        <div class="col-md-4">
                             <img class="img-fluid" src="images/chukyso.jpg" alt="">
                         </div>
                     </div>
@@ -62,16 +66,16 @@
             </div>
             <div class="tabs-group">
                 <div class="line"></div>
-                <div class="col-3 tab-item active">
+                <div class="col-md-3 tab-item active">
                     Dịch vụ chữ kí số
                 </div>
-                <div class="col-3 tab-item">
+                <div class="col-md-3 tab-item">
                     Seminar
                 </div>
-                <div class="col-3 tab-item">
+                <div class="col-md-3 tab-item">
                     Vast Campus
                 </div>
-                <div class="col-3 tab-item">
+                <div class="col-md-3 tab-item">
                     Vast Portal
                 </div>
             </div>
@@ -85,7 +89,7 @@
                 
                 while ($row = mysqli_fetch_assoc($select_news_query)){
                     $news_id = $row['news_id'];
-                    $news_title = $row['news_title'];
+                    $news_title = substr($row['news_title'],0,120);
                     $news_author = $row['news_author'];
                     $news_date = $row['news_date'];
                     $news_image = $row['news_image'];
@@ -95,21 +99,21 @@
                     if($news_status == 'published'){
                         ?>   
                             <!-- First Blog Post -->
-                            <div  class="col-6 news-header" >
+                            <div  class="col-md-6 news-header" >
                                 <div class="row">
-                                    <div class="col-6">
-                                        <img class="img-fluid" src="images/<?php echo $news_image; ?>" alt="">
+                                    <div class="col-md-4">
+                                        <a href="#">
+                                                <img style="object-fit: cover; height: 150px; width: 200px;" class="img-fluid" src="images/<?php echo $news_image; ?> " alt="" >
+                                        </a>
                                     </div>
-                                    <div class="col-6">
-                                        <a href="post.php?new_id=<?php echo $news_id; ?>"><?php echo $news_title; ?></a>
-                                        <br />
-                                        <p>
-                                            <i class='bx bxs-calendar'></i>
-                                            <?php echo $news_date ?>
-                                        </p>
+                                    <div class="col-md-8">
+                                        <a class="" href="post.php?new_id=<?php echo $news_id; ?>"><b><?php echo $news_title ?> . . .</b></a>
                                         <div>
-                                            <?php echo $news_content; ?>
+                                            <i class='bx bx-calendar-alt'></i>
+                                            <?php echo $news_date; ?>
                                         </div>
+                                        <span><i class='bx bx-user'></i><a style="font-size: 14px;" href="#"><?php echo $news_author ?></a></span>
+                                       
                                     </div>
 
                                 </div>
@@ -118,15 +122,13 @@
                     }
                 }
             ?>
-                    
+            <div class="d-grid justify-content-md-center ">
+                    <button style="width: 500px;" class="btn btn-outline-danger"><a href="thong-bao.php">See More <i class='bx bx-right-arrow-alt'></i></a></button>
+            </div>        
         </div>
-        <div class="row justify-content-center">
-            <div class="col-12">
-                <button class="btn"><a href="ban-tin.php">See More</a></button> 
-            </div>
-        </div>
+
         <div class="row" id="noti">
-            <div style="background-color: #FFE6E6; padding-bottom: 10px;" class="col-5">
+            <div style="background-color: #FFE6E6; padding-bottom: 10px; border-radius: 10px;" class="col-md-5">
                 <div style="height: 350px;" >
                     <h5 class="title">
                         Thông Báo
@@ -151,11 +153,13 @@
                     ?>
                 </div>
                 <div class=" d-grid d-md-flex justify-content-md-end ">
-                    <button class="btn btn-outline-danger"><a href="thong-bao.php">See More <i class='bx bx-right-arrow-alt'></i></a></button>
+                    <button style="background-color: #fff;" class="btn btn-outline-danger"><a href="thong-bao.php">See More <i class='bx bx-right-arrow-alt'></i></a></button>
                 </div>
             </div>
-            <div style="height: 350px;" class="col-1"></div>
-            <div class="col-6">
+
+            <div style="height: 350px;" class="col-md-1"></div>
+            
+            <div style="border: 1px solid #9F0311; padding-bottom: 10px; border-radius: 10px;" class="col-md-6">
                 <div style="height: 350px;">
                     <h5 class="title">Hoạt Động Đoàn Thể</h5>
                     <?php 
@@ -182,46 +186,57 @@
                     ?>
                 </div>
                 <div class="d-grid d-md-flex justify-content-md-end ">
-                    <button class="btn btn-outline-danger"><a href="doan-the.php">See More<i class='bx bx-right-arrow-alt'></i></a></button>
+                    <button style="background-color: #FFE6E6;" class="btn btn-outline-danger"><a href="doan-the.php">See More<i class='bx bx-right-arrow-alt'></i></a></button>
                 </div>
             </div>
             
         </div>
 
         <div class="row" id="lib-img">
-            <div class="col-9">
-                <div class="row">
-                    <h5 class="title">Thư Viện Ảnh</h5>
-                    <div class="col-3">
+            <div class="col-md-8">
+                <h5 class="title">Thư Viện Ảnh</h5>
+                <div id="carouselExampleDark" class="carousel carousel-light slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="images/banner.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="images/banner.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/banner.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    </div>
+                </div>
 
-                        <img class="img-fluid" src="images/chukyso.jpg" alt="">
-                    </div>
-                    <div class="col-3">
-                        <img class="img-fluid" src="images/chukyso.jpg" alt="">
-                    </div>
-                    <div class="col-3">
-                        <img class="img-fluid" src="images/chukyso.jpg" alt="">
-                    </div>
-                    <div class="col-3">
-                        <img class="img-fluid" src="images/chukyso.jpg" alt="">
-                    </div>
-                    <div class="col-3">
-                        <img class="img-fluid" src="images/chukyso.jpg" alt="">
-                    </div>
-                    <div class="col-3">
-                        <img class="img-fluid" src="images/chukyso.jpg" alt="">
-                    </div>
-                    <div class="col-3">
-                        <img class="img-fluid" src="images/chukyso.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="row">
-                    <div class="col-12">
-                        <h5 class="title">Liên kết</h5>
-                    </div>
-                </div>
+            <div class="col-md-4">
+                <h5 class="title">Liên kết</h5>
             </div>
         </div>
 
@@ -230,13 +245,13 @@
     <section style="background-color: #9F0311; color: #fff; padding: 5px; " id="footer">
         <div  class="container">
             <div class="row">
-                <div class="col-5">
+                <div class="col-md-5">
                     <h5 style="color: #fff;"></h5><b>Trung tâm Tin học và Tính toán - Viện Hàn lâm KHCNVN</b></h5> <br /> <br />
                     Liên hệ với Phòng Nội dung thông tin số khi phát hành lại thông tin trên Website này. <br /> 
                     Địa chỉ: 18 Hoàng Quốc Việt, Cầu Giấy, Hà Nội. <br /> 
                     Email: thongtin@vast.vn
                 </div>
-                <div class="col-2">
+                <div class="col-md-2">
                     <h5 style="color: #fff;"></h5><b>Về Trung tâm TH&TT</b></h5> <br /> <br />
                     <ul >
                         <li><a href="#">Giới Thiệu</a></li> 
@@ -248,7 +263,7 @@
                         <li><a href="#">Hình ảnh</a></li> 
                     </ul>
                 </div>
-                <div class="col-5 justify-content-center">
+                <div class="col-md-5 justify-content-center">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0591412047556!2d106.69259627481863!3d10.80678245863353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528c176a97ead%3A0x81d7ce6bc53ab3c8!2zVHJ1bmcgdMOibSB0aW4gaOG7jWMgVGjhu5FuZyBrw6ogS2h1IHbhu7FjIElJIChDT1NJU0hDTSk!5e0!3m2!1svi!2s!4v1700034309387!5m2!1svi!2s" height="220px" width="80%" style="border: 1px solid #000; margin-left: 100px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class=""></iframe>
                 </div>
             </div>

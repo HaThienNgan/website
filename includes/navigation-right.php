@@ -23,10 +23,13 @@
                     <h4>TRUNG TÂM TIN HỌC THỐNG KÊ KHU VỰC II</h4>
                     <h5 style="color: #fff;">Center Of Statistical Infomatics Services No 2</h5>
                 </div>
-                <nav style="background-color: #9F0311;" class="navbar navbar-expand-lg col-6">
+                <nav style="background-color: #9F0311;" class="navbar navbar-expand-lg col-6 ">
                     <div style="background-color: #9F0311;" class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="index.php">Trang Chủ</a>
                                 </li>
