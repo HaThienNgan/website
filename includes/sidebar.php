@@ -55,10 +55,27 @@
         <p style="color: #9F0311;"><b>Hoạt động Đoàn thể</b></p>
         <div>
             <ul style="list-style-type: none;">
-                <li><a href="">Mắt Thông Minh Smart-Eyes</a></li>
+            <?php 
+                $query = "SELECT * FROM activities ORDER BY activity_date DESC LIMIT 4";
+                $select_all_acti_query = mysqli_query($connect, $query);
+                
+                while ($row = mysqli_fetch_assoc($select_all_acti_query)){
+                    $activity_id = $row['activity_id'];
+                    $activity_title = $row['activity_title'];
+                    $activity_author = $row['activity_author'];
+                    $activity_date = $row['activity_date'];
+                    $activity_image = $row['activity_image'];
+                    $activity_tags = $row['activity_tags'];
+                    $activity_content = substr($row['activity_content'],0,100);
+                    $activity_status = $row['activity_status'];
+
+            ?>
+                <li><a href="post.php?acti_id=<?php echo $activity_id; ?>"><?php echo $activity_title; ?></a></li>
                 <hr>
-                <li><a href="">Thiết bị phát hiện vật thể lạ (FOD)</a></li>
-                <hr>
+            <?php
+                }
+            ?>
+
                 <li><a href="">Hệ thống Thám Không Thông tin Liên Lạc</a></li>    
                 <hr>
                 <li><a href="">Hệ thống Thám Không Thông tin Liên Lạc</a></li>               
@@ -66,7 +83,7 @@
         </div>
     </div>
     <div style="border: 1px solid #9F0311; background-color: #FFE6E6; border-radius: 8px; padding: 10px; margin-bottom: 40px;"> 
-        <p style="color: #9F0311; margin-left: 5px"><b>Các Tin Khác</b></p>
+        <p style="color: #9F0311; margin-left: 5px"><b>Các Công Trình Ứng Dụng</b></p>
         <ul style="list-style-type: none;">
             <li><a href="">Mắt Thông Minh Smart-Eyes</a></li>
             <hr>

@@ -126,57 +126,66 @@
             </div>
         </div>
         <div class="row" id="noti">
-            <div class="col-5">
-                <h5 class="title">
-                    Thông Báo
-                </h5>
-            
-                <?php
-                    $query = "SELECT * FROM notification ORDER BY noti_date DESC LIMIT 6";
-                    $select_noti_query = mysqli_query($connect, $query);
-                    
-                    while ($row = mysqli_fetch_assoc($select_noti_query)){
-                        $noti_id = $row['noti_id'];
-                        $noti_title = $row['noti_title'];
-                        $noti_date = $row['noti_date'];
-                        $noti_image = $row['noti_image'];
-                        $noti_content = substr($row['noti_content'],0,100);
-                        ?>   
-                            <a href="post.php?noti_id=<?php echo $noti_id; ?>"><?php echo $noti_title; ?></a>
-                            <p><?php echo $noti_date; ?></p>
-                            
-                        <?php
+            <div style="background-color: #FFE6E6; padding-bottom: 10px;" class="col-5">
+                <div style="height: 350px;" >
+                    <h5 class="title">
+                        Thông Báo
+                    </h5>
+                
+                    <?php
+                        $query = "SELECT * FROM notification ORDER BY noti_date DESC LIMIT 6";
+                        $select_noti_query = mysqli_query($connect, $query);
+                        
+                        while ($row = mysqli_fetch_assoc($select_noti_query)){
+                            $noti_id = $row['noti_id'];
+                            $noti_title = $row['noti_title'];
+                            $noti_date = $row['noti_date'];
+                            $noti_image = $row['noti_image'];
+                            $noti_content = substr($row['noti_content'],0,100);
+                            ?>   
+                                <a href="post.php?noti_id=<?php echo $noti_id; ?>"><?php echo $noti_title; ?></a>
+                                <p><?php echo $noti_date; ?></p>
+                                
+                            <?php
                         }
-                ?>
+                    ?>
+                </div>
+                <div class=" d-grid d-md-flex justify-content-md-end ">
+                    <button class="btn btn-outline-danger"><a href="thong-bao.php">See More <i class='bx bx-right-arrow-alt'></i></a></button>
+                </div>
             </div>
-            <div class="col-1"></div>
+            <div style="height: 350px;" class="col-1"></div>
             <div class="col-6">
-                <h5 class="title">Hoạt Động Đoàn Thể</h5>
-                <?php 
-                    $query = "SELECT * FROM activities ORDER BY activity_date DESC LIMIT 6";
-                    $select_acti_query = mysqli_query($connect, $query);
-                
-                    while ($row = mysqli_fetch_assoc($select_acti_query)){
-                        $activity_id = $row['activity_id'];
-                        $activity_title = $row['activity_title'];
-                        $activity_author = $row['activity_author'];
-                        $activity_date = $row['activity_date'];
-                        $activity_image = $row['activity_image'];
-                        $activity_tags = $row['activity_tags'];
-                        $activity_content = substr($row['activity_content'],0,100);
-                        $activity_status = $row['activity_status'];
+                <div style="height: 350px;">
+                    <h5 class="title">Hoạt Động Đoàn Thể</h5>
+                    <?php 
+                        $query = "SELECT * FROM activities ORDER BY activity_date DESC LIMIT 6";
+                        $select_acti_query = mysqli_query($connect, $query);
+                    
+                        while ($row = mysqli_fetch_assoc($select_acti_query)){
+                            $activity_id = $row['activity_id'];
+                            $activity_title = $row['activity_title'];
+                            $activity_author = $row['activity_author'];
+                            $activity_date = $row['activity_date'];
+                            $activity_image = $row['activity_image'];
+                            $activity_tags = $row['activity_tags'];
+                            $activity_content = substr($row['activity_content'],0,100);
+                            $activity_status = $row['activity_status'];
 
-                        if($news_status == 'published'){
-                ?>   
-                            <a href="post.php?acti_id=<?php echo $activity_id; ?>"><?php echo $activity_title; ?></a>
-                            <p><?php echo $activity_date; ?></p>      
-                <?php
+                            if($news_status == 'published'){
+                    ?>   
+                                <a href="post.php?acti_id=<?php echo $activity_id; ?>"><?php echo $activity_title; ?></a>
+                                <p><?php echo $activity_date; ?></p>      
+                    <?php
+                            }
                         }
-                    }
-                ?>
-                
+                    ?>
+                </div>
+                <div class="d-grid d-md-flex justify-content-md-end ">
+                    <button class="btn btn-outline-danger"><a href="doan-the.php">See More<i class='bx bx-right-arrow-alt'></i></a></button>
+                </div>
             </div>
-            <button class="btn justify-content-end"><a href="thong-bao.php">See More</a></button>
+            
         </div>
 
         <div class="row" id="lib-img">
@@ -244,7 +253,7 @@
                 </div>
             </div>
             <hr>
-            <span>© 2023 COSIS.HCM - Developed by Thien Ngan</span>
+            <span>© 2023 COSIS.HCM. All Rights Reserved.</span>
             <br />
         </div>
     </section>
