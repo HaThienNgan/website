@@ -2,17 +2,6 @@
     include "includes/header.php";
 ?>
 <style>
-    .nav-link {
-        color: #fff;
-    }
-    .dropdown-toggle {
-        text-decoration: none;
-        color: #fff;
-    }
-    .dropdown {
-        margin-top: 7px;
-        margin-left: 5px;
-    }
     a{
         text-decoration: none;
         color: #9F0311;
@@ -25,30 +14,6 @@
         color: black;
     }
 </style>
-
-<section id="header">
-    <div class="container">
-        <div class="row ">
-            <div class="col-4">
-                <h4>Thông Báo</h4>
-            </div>
-            <div class="col-8">
-                <nav class="navbar navbar-expand-lg">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav navbarSupportedContent" >
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#gioi-thieu">Giới Thiệu</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section id="content-bantin">
     <div class="container">

@@ -2,18 +2,6 @@
     include "includes/header.php";
 ?>
 <style>
-    .nav-link {
-        color: #fff;
-    }
-    .dropdown-toggle {
-        text-decoration: none;
-        color: #fff;
-    }
-    .dropdown {
-        margin-top: 7px;
-        margin-left: 5px;
-    }
-
     a {
         text-decoration:  none;
         color: #9F0311;
@@ -25,29 +13,7 @@
         width: 400px;
     }
 </style>
-<section id="header">
-    <div class="container">
-        <div class="row ">
-            <div class="col-4">
-                <h4>Trung Tâm Tin Học và Tính Toán</h4>
-            </div>
-            <div class="col-8">
-                <nav class="navbar navbar-expand-lg">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav navbarSupportedContent" >
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="co-cau-to-chuc.php">Giới Thiệu</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-</section>
+
 <section id="content-post">
     <div class="container">
         <div class="row justify-content-center">

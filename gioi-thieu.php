@@ -2,36 +2,6 @@
     include "includes/header.php";
 ?>
 
-<section id="header">
-    <div class="container">
-        <div class="row ">
-            <div class="col-5">
-                <h4>Giới thiệu Trung Tâm Tin Học và Tính Toán</h4>
-            </div>
-            <div class="col-7">
-                <nav class="navbar navbar-expand-lg">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav navbarSupportedContent" >
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#gioi-thieu">Giới Thiệu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#to-chuc-nhan-su">Tổ Chức</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#thanh-tuu">Thành Tựu</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section id="content-gioithieu">
     <div class="container">
         <div id="gioi-thieu" class="row justify-content-center">
@@ -81,6 +51,9 @@
         </div>
     </div>
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
 <?php 
     include "includes/footer.php";
 ?>
