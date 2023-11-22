@@ -22,7 +22,7 @@
         </div>
         <div class="row justify-content-end" id="introduction">
             <h5 class="title text-center">
-     bottom: 10px" href="#">Giới thiệu Trung tâm Tin học và Tính toán</a>
+                <a href="#">Giới thiệu Trung tâm Tin học và Tính toán</a>
             </h5>
             <div class="col-md-6"> 
                 Trung tâm Tin học và Tính toán – Viện Hàn lâm Khoa học và Công nghệ Việt Nam (Tên giao dịch tiếng Anh: Center for Informatics and Computing) được thành lập theo Quyết định số 107/QĐ-KHCNVN ngày 16 tháng 2 năm 2009 của Chủ tịch Viện Khoa học và Công nghệ Việt Nam với tên gọi là Trung tâm Tin học. Ngày 19/02/2013 Chủ tịch Viện Hàn lâm Khoa học và Công nghệ Việt Nam ban hành quyết định số 62/QĐ-VHL về việc chuyển đổi Trung tâm Tin học thành Trung tâm Tin học và Tính toán . . .

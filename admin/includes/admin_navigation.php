@@ -148,7 +148,7 @@
                 </ul>
             </li>
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#activities"><i style="margin-right: 5px;" class="fa fa-newspaper-o"></i> Hoạt Động Đoàn Thể <i class="fa fa-fw fa-caret-down"></i></a>
+                <a href="javascript:;" data-toggle="collapse" data-target="#activities"><i style="margin-right: 5px;" class="fa fa-users"></i> Hoạt Động Đoàn Thể <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="activities" class="collapse">
                     <li>
                         <a href="./activities.php">Quản lí Các HĐĐT</a>
